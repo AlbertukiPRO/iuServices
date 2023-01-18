@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alberto NR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>IU Services</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+    <div class="container center-align">
+        <h4>Clientes</h4>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a class="waves-effect waves-light btn deep-purple tooltipped modal-trigger"
+                       data-position="bottom"
+                       href="#modal1"
+                       data-tooltip="Muestra el formulario para registrar un nuevo cliente">
+                        <i class="material-icons right">add</i>
+                        Nuevo Cliente
+                    </a>
+                    <a class="waves-effect waves-light btn deep-purple">
+                        <i class="material-icons right">delete</i>
+                        Borrar Cliente
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Nuevo cliente</h4>
+                <p>Formulario para registrar a un nuevo cliente</p>
+                <hr>
+                <div class="row">
+                    <form onsubmit="return false;" >
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="nombrelabel" type="text" class="validate">
+                            <label for="nombrelabel">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mail</i>
+                            <input id="correolabel" type="email" class="validate">
+                            <label for="correolabel">Correo</label>
+                            <span class="helper-text" data-error="esto no es un correo valido" data-success="ok"></span>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">image</i>
+                            <input id="imglabel" type="text" class="validate">
+                            <label for="imglabel">Url de la foto</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">key</i>
+                            <input id="paslabel" type="password" class="validate">
+                            <label for="paslabel">Contraseña</label>
+                        </div>
+                        <button class="btn waves-effect waves-light deep-purple"  id="sendform">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
